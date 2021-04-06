@@ -1,0 +1,39 @@
+{
+  "name": "epulor-blog",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Blog to meet content needs of Epulor.",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "knex": "0.21.18",
+    "sqlite3": "5.0.0",
+    "strapi": "3.5.4",
+    "strapi-admin": "3.5.4",
+    "strapi-connector-bookshelf": "3.5.4",
+    "strapi-connector-mongoose": "3.5.4",
+    "strapi-plugin-content-manager": "3.5.4",
+    "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-email": "3.5.4",
+    "strapi-plugin-upload": "3.5.4",
+    "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-provider-upload-azure-storage": "1.1.2",
+    "strapi-utils": "3.5.4"
+  },
+  "author": {
+    "name": "Rehman Shafi"
+  },
+  "strapi": {
+    "uuid": "89ca7e1c-865c-4b72-b007-54e768df5513"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": "^6.0.0"
+  },
+  "license": "MIT"
+}
