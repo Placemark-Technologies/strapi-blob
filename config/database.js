@@ -1,21 +1,25 @@
+require("dotenv").config();
 module.exports = ({ env }) => ({
-  defaultConnection: 'remote',
+  defaultConnection: "remote",
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: "bookshelf",
       settings: {
-        client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        client: "sqlite",
+        filename: env("DATABASE_FILENAME", ".tmp/data.db"),
       },
       options: {
         useNullAsDefault: true,
       },
     },
     remote: {
-      connector: 'mongoose',
+      connector: "mongoose",
       settings: {
-        database: env('DATABASE_NAME'),
-        uri: `mongodb+srv://${env('DATABASE_USERNAME')}:${env('DATABASE_PASSWORD')}@${env('DATABASE_HOST')}/${env('DATABASE_NAME')}?retryWrites=true&w=majority`,
+        uri: `mongodb://${env("DATABASE_USERNAME")}:${env(
+          "DATABASE_PASSWORD"
+        )}@projectres-shard-00-00.ytiyf.mongodb.net:27017,projectres-shard-00-01.ytiyf.mongodb.net:27017,projectres-shard-00-02.ytiyf.mongodb.net:27017/${env(
+          "DATABASE_NAME"
+        )}?ssl=true&replicaSet=atlas-vik0ib-shard-0&authSource=admin&retryWrites=true&w=majority`,
       },
       options: {
         ssl: true,
